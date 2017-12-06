@@ -35,7 +35,7 @@ wso2.testgrid.infrastructure:
   scripts:
     -
      scriptType: "CLOUD_FORMATION"
-     filePath: "wso2-is-with-alb-cf-template.yml"
+     filePath: "pattern-1-with-puppet-cloudformation.template"
      name: "wso2-is-public-branch"
      scriptParameters: "wso2-is-with-alb-cf-template-parameters.json"
 
