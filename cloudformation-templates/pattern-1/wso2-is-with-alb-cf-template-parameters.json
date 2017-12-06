@@ -1,19 +1,19 @@
 [
   {
-    "ParameterKey": "EC2KeyPair",
-    "ParameterValue": "testgrid-key"
+    "parameterKey": "EC2KeyPair",
+    "parameterValue": "testgrid-key"
   }, 
   {
-    "ParameterKey": "WSO2ISInstanceType",
-    "ParameterValue": "m4.large"
+    "parameterKey": "WSO2ISInstanceType",
+    "parameterValue": "m4.large"
   },
   {
-    "ParameterKey": "ALBCertificateARN",
-    "ParameterValue": "arn:aws:acm:us-east-1:809489900555:certificate/2ab5aded-5df1-4549-9f7e-91639ff6634e"
+    "parameterKey": "ALBCertificateARN",
+    "parameterValue": "arn:aws:acm:us-east-1:809489900555:certificate/2ab5aded-5df1-4549-9f7e-91639ff6634e"
   },
   {
-    "ParameterKey": "DBPassword",
-    "ParameterValue": "DB_Password"
+    "parameterKey": "DBPassword",
+    "parameterValue": "DB_Password"
   }
 
 
