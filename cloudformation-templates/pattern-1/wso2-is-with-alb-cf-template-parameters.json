@@ -1,0 +1,20 @@
+[
+  {
+    "ParameterKey": "EC2KeyPair",
+    "ParameterValue": "testgrid-key"
+  }, 
+  {
+    "ParameterKey": "WSO2ISInstanceType",
+    "ParameterValue": "m4.large"
+  },
+  {
+    "ParameterKey": "ALBCertificateARN",
+    "ParameterValue": "arn:aws:acm:us-east-1:809489900555:certificate/2ab5aded-5df1-4549-9f7e-91639ff6634e"
+  },
+  {
+    "ParameterKey": "DBPassword",
+    "ParameterValue": "DB_Password"
+  }
+
+
+]
