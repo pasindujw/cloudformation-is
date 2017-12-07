@@ -35,6 +35,8 @@ wso2.testgrid.infrastructure:
      scriptType: "CLOUD_FORMATION"
      filePath: "pattern-1-with-puppet-cloudformation.template.yml"
      name: "wso2-is-public-branch"
+     #should be set as environment variables on Jenkins
+     environmentScriptParameters:
      scriptParameters:
        DBEngine: *databaseEngine
        DBEngineVersion: *databaseVersion 
