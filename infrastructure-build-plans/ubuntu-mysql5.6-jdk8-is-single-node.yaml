@@ -24,18 +24,23 @@ wso2.testgrid.infrastructure:
     name: "Ubuntu"
     version: "17.04"
   database:
-    engine: "MYSQL"
-    version: "5.6"
-  jdk:
-    name: "Oracle"
-    version: "1.8"
+    engine: &databaseEngine "MYSQL"
+    version: &databaseVersion "5.6"
+  jdk: &jdk "JDK8"
   securityProperties:
     apiKey: "242424"
     sshKey: "abc.key"
   scripts:
     -
      scriptType: "CLOUD_FORMATION"
-     filePath: "wso2-is-with-alb-cf-template.yml"
+     filePath: "pattern-1-with-puppet-cloudformation.template.yml"
      name: "wso2-is-public-branch"
-     scriptParameters: "wso2-is-with-alb-cf-template-parameters.json"
+     scriptParameters:
+       CloudFormationParameterFile: "wso2-is-with-alb-cf-template-parameters.json"
+       DBEngine: *databaseEngine
+       DBEngineVersion: *databaseVersion 
+       JDK: *jdk
+       DBPassword: "DB_Password"
+       EC2KeyPair: "testgrid-key"
+       ALBCertificateARN: "arn:aws:acm:us-east-1:809489900555:certificate/2ab5aded-5df1-4549-9f7e-91639ff6634e"
 
