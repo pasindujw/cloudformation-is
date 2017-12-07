@@ -19,7 +19,7 @@ wso2.testgrid.infrastructure:
   providerType: "AWS"
   clusterType: "None"
   instanceType: "EC2"
-  name: "single-node"
+  name: "two-node"
   operatingSystem:
     name: "Ubuntu"
     version: "17.04"
