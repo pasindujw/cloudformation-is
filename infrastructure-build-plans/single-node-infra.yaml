@@ -25,7 +25,7 @@ wso2.testgrid.infrastructure:
       version: "17.04"
   databases:
      - engine: "MYSQL"
-       version: "5.7"
+       version: "5.6.35"
   jdks:
      - "ORACLE_JDK8"
   securityProperties:
