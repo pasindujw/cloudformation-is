@@ -32,7 +32,7 @@ wget --tries=3 http://central.maven.org/maven2/mysql/mysql-connector-java/5.1.44
 echo ">> JDBC Driver download completed!"
 
 echo ">> Downloading WSO2 IS Distribution: wso2is-5.4.0-beta"
-wget --tries=3 https://github.com/wso2/product-is/releases/download/v5.4.0-beta/wso2is-5.4.0-beta.zip -P downloads
+wget --tries=3 https://github.com/wso2/product-is/archive/v5.4.0.zip -P downloads
 echo ">> WSO2 IS download completed!"
 
 
