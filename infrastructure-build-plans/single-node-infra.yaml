@@ -21,10 +21,10 @@ channel: "LTS"
 deploymentPatterns:
     -  "cloudformation-templates/pattern-1"
 infraParams:
-  - databaseName: "mysql"
-    databaseVersion:
+  - DBEngine: "mysql"
+    DBEngineVersion:
       - "5.6.35"
-    jdk:
+    JDK:
         - "ORACLE_JDK8"
 scenarios:
     -  "solution02"
