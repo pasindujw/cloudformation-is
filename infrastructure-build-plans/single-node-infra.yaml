@@ -15,7 +15,7 @@
 ################################################################################
 
 # TestGrid Test Configuration Parameters
-productName: "wso2is5.4.0LTS"
+productName: "wso2is5.4.1LTS"
 deploymentPatterns:
     -  "cloudformation-templates/pattern-1"
 infraParams:
