@@ -25,17 +25,9 @@ infraParams:
     JDK:
         - "ORACLE_JDK8"
 scenarios:
-    -  "scenario01"
     -  "scenario02"
-    -  "scenario06"
-    -  "scenario09"
-    -  "scenario10"
     -  "scenario12"
-    -  "scenario18"
     -  "scenario21"
-    -  "scenario23"
-    -  "scenario28"
-    -  "scenario29"
 infrastructure:
   providerType: "AWS"
   clusterType: "None"
