@@ -32,6 +32,7 @@ scenarios:
 infrastructure:
   providerType: "AWS"
   clusterType: "None"
+  region: "us-east-1"
   instanceType: "EC2"
   name: "cloudformation-templates/pattern-2"
   securityProperties:
