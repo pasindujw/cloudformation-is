@@ -29,6 +29,7 @@ scenarios:
     -  "scenario12"
     -  "scenario18"    
     -  "scenario21"
+    -  "scenario28"
 infrastructure:
   providerType: "AWS"
   clusterType: "None"
