@@ -1,6 +1,6 @@
 # TestGrid configuration file.
 version: '0.9'
-infrastructure:
+infrastructureConfig:
   iacProvider: CLOUDFORMATION
   infrastructureProvider: AWS
   containerOrchestrationEngine: None
@@ -29,16 +29,3 @@ scenarioConfig:
     -  "scenario18"
     -  "scenario21"
     -  "scenario28"
-    
-deploymentConfig:
-  deploymentPatterns:
-    - name: 01-two-node-deployment
-      description: Deploys a two node IS cluster
-      dir: cloudformation-templates/pattern-1
-      scripts:
-        - name: 01-deploy-a-two-node-is-cluster
-          description: Do a IS two node deployment.
-          type: SHELL
-          file: deploy.sh
-          inputParameters:
-            parseInfrastructureScript: false
