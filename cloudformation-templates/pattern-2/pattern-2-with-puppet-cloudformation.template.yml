@@ -60,6 +60,10 @@ Mappings:
 # User inputs
 #############################
 Parameters:
+  AMI:
+    Type: String
+    Default: READ_FROM_REGIONMAP
+    Description: AMI of the region. Keep READ_FROM_REGIONMAP to map Ubuntu AMI from the RegionMap in the script.
   JDK:
     Type: String
     Default: "ORACLE_JDK8"
@@ -150,6 +154,11 @@ Parameters:
     Type: String
     NoEcho: true
     Description: The AWS Access Key Secret used for internal AWS clustering
+
+# Conditions
+Conditions:
+  UseDefaultUbuntuAMI: !Equals [!Ref AMI, READ_FROM_REGIONMAP]
+
 ################################
 # Create AWS resources
 ################################
@@ -391,7 +400,8 @@ Resources:
     Properties:
       DisableApiTermination: 'false'
       InstanceInitiatedShutdownBehavior: stop
-      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
+      ImageId:
+        Fn::If: [UseDefaultUbuntuAMI, !FindInMap [RegionMap, !Ref "AWS::Region", AMI], !Ref AMI]
       InstanceType: t2.micro
       KeyName: !Ref EC2KeyPair
       Monitoring: 'false'
@@ -411,7 +421,8 @@ Resources:
       Properties:
         DisableApiTermination: 'false'
         InstanceInitiatedShutdownBehavior: stop
-        ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
+        ImageId:
+          Fn::If: [UseDefaultUbuntuAMI, !FindInMap [RegionMap, !Ref "AWS::Region", AMI], !Ref AMI]
         InstanceType: t2.micro
         KeyName: !Ref EC2KeyPair
         Monitoring: 'false'
@@ -456,7 +467,8 @@ Resources:
     Properties:
       DisableApiTermination: 'false'
       InstanceInitiatedShutdownBehavior: stop
-      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
+      ImageId:
+        Fn::If: [UseDefaultUbuntuAMI, !FindInMap [RegionMap, !Ref "AWS::Region", AMI], !Ref AMI]
       InstanceType: !Ref WSO2ISInstanceType
       KeyName: !Ref EC2KeyPair
       Monitoring: 'false'
@@ -495,7 +507,8 @@ Resources:
     Properties:
       DisableApiTermination: 'false'
       InstanceInitiatedShutdownBehavior: stop
-      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
+      ImageId:
+        Fn::If: [UseDefaultUbuntuAMI, !FindInMap [RegionMap, !Ref "AWS::Region", AMI], !Ref AMI]
       InstanceType: !Ref WSO2ISInstanceType
       KeyName: !Ref EC2KeyPair
       Monitoring: 'false'
