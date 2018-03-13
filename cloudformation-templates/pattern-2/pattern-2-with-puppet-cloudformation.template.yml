@@ -71,6 +71,9 @@ Parameters:
     AllowedValues:
       - ORACLE_JDK7
       - ORACLE_JDK8
+      - ORACLE_JDK9
+      - OPEN_JDK8
+      - OPEN_JDK9
   DBEngine:
     Type: String
     Default: "mysql"
