@@ -1,0 +1,31 @@
+# TestGrid configuration file.
+version: '0.9'
+infrastructureConfig:
+  iacProvider: CLOUDFORMATION
+  infrastructureProvider: AWS
+  containerOrchestrationEngine: None
+  parameters:
+    - JDK : ORACLE_JDK8
+  provisioners:
+    - name: 01-two-node-deployment
+      description: Provision Infra for a two node IS cluster
+      dir: cloudformation-templates/pattern-1
+      scripts:
+        - name: infra-for-two-node-deployment
+          description: Creates infrastructure for a IS two node deployment.
+          type: CLOUDFORMATION
+          file: pattern-1-with-puppet-cloudformation.template.yml
+          inputParameters:
+            parseInfrastructureScript: false
+            region: us-east-2
+            DBPassword: "DB_Password"
+            EC2KeyPair: "testgrid-key"
+            ALBCertificateARN: "arn:aws:acm:us-east-1:809489900555:certificate/2ab5aded-5df1-4549-9f7e-91639ff6634e"
+
+scenarioConfig:
+  scenarios:
+    -  "scenario02"
+    -  "scenario12"
+    -  "scenario18"
+    -  "scenario21"
+    -  "scenario28"

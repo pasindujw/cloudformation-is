@@ -11,7 +11,7 @@ readonly DB_VERSION=$10
 readonly IS_HOST_NAME=$12
 
 readonly PRODUCT_NAME="wso2is"
-readonly PRODUCT_VERSION="5.3.0"
+readonly PRODUCT_VERSION="5.4.0"
 readonly WUM_PRODUCT_NAME=${PRODUCT_NAME}-${PRODUCT_VERSION}
 readonly WUM_PRODUCT_DIR=/home/${USERNAME}/.wum-wso2/products/${PRODUCT_NAME}/${PRODUCT_VERSION}
 readonly INSTALLATION_DIR=/opt/wso2
